@@ -63,7 +63,8 @@ public class SortingMethods {
     }
     /*
      * wersja Piotrka
-     * */
+     *
+     */
     public static <T extends Comparable> void insertSort(T[] in) {
         int n = in.length;
         int i;
