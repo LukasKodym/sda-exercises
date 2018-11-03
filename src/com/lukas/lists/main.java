@@ -28,5 +28,11 @@ public class main {
         list.tail.next = e3;
         list.tail = e3;
         list.count++;
+
+        list.printElements();
+        System.out.println();
+        list.printElementsRev();
+
     }
+
 }
