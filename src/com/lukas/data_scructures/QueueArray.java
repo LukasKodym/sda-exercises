@@ -12,7 +12,7 @@ public class QueueArray {
     }
 
     public int pop(){
-        return 0;
+        return array[size--];
     }
 
 }
