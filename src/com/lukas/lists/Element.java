@@ -4,6 +4,6 @@ public class Element {
 
     public Element next = null;
     public Element prev = null;
-    public String data;
+    public String data = null;
 
 }
