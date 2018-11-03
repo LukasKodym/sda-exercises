@@ -24,12 +24,9 @@ public class main {
         // trzeci element
         Element e3 = new Element();
         e3.data = "element trzeci";
-        e2.next = e3;
-        e3.prev = e2;
+        e3.prev = list.tail;
+        list.tail.next = e3;
         list.tail = e3;
         list.count++;
-
-
     }
-
 }
