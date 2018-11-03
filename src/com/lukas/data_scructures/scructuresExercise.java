@@ -17,7 +17,6 @@ public class scructuresExercise {
 
         System.out.println(tab8[2]);
 
-
         for (int i = 0; i < tab3.length - 1; i++) {
 
             Random random = new Random();
