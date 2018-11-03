@@ -15,6 +15,11 @@ public class QueueArray {
         return array[size--];
     }
 
+    public String toString(){
+        return null;
+        //todo to finish this method
+    }
+
 }
 
 
