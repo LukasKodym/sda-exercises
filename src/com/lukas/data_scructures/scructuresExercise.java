@@ -1,6 +1,7 @@
 package com.lukas.data_scructures;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class scructuresExercise {
 
@@ -16,12 +17,10 @@ public class scructuresExercise {
         double[] tab8 = new double[4];
 
         System.out.println(tab8[2]);
+        Random random = new Random();
 
         for (int i = 0; i < tab3.length - 1; i++) {
-
-            Random random = new Random();
-            int a = random.nextInt(20);
-            tab3[i] = a;
+            tab3[i] = random.nextInt(20);
             System.out.println(tab3[i]);
         }
 
@@ -36,8 +35,31 @@ public class scructuresExercise {
         for (int i = 0; i < parzyste.length - 1; i++) {
 
             parzyste[i] = p;
-            p = p + 2;
+            p += 2;
             System.out.println(parzyste[i]);
         }
+        System.out.println();
+        for (int i = 0; i < nieparzyste.length - 1; i++) {
+
+            nieparzyste[i] = n;
+            n += 2;
+            System.out.println(nieparzyste[i]);
+        }
+
+        int[] chart = {1, 4, 78, 3};
+
+        Scanner scanner = new Scanner(System.in);
+
+//        int a = scanner.nextInt();
+//
+//        for (int i = 0; i < chart.length ; i++) {
+//            if(i==a) {return i;}
+//            else
+//                return; -1;
+
+
+
+
+
     }
 }
