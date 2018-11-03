@@ -1,4 +1,4 @@
-package com.lukas.Lists;
+package com.lukas.lists;
 
 public class MyList {
     public Element head = null;
