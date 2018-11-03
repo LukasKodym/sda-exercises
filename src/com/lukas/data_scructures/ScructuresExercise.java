@@ -3,7 +3,7 @@ package com.lukas.data_scructures;
 import java.util.Random;
 import java.util.Scanner;
 
-public class scructuresExercise {
+public class ScructuresExercise {
 
     public static void main(String[] args) {
 
@@ -32,14 +32,14 @@ public class scructuresExercise {
         int p = 0;
         int n = 1;
 
-        for (int i = 0; i < parzyste.length - 1; i++) {
+        for (int i = 0; i < parzyste.length; i++) {
 
             parzyste[i] = p;
             p += 2;
             System.out.println(parzyste[i]);
         }
         System.out.println();
-        for (int i = 0; i < nieparzyste.length - 1; i++) {
+        for (int i = 0; i < nieparzyste.length ; i++) {
 
             nieparzyste[i] = n;
             n += 2;
@@ -49,17 +49,15 @@ public class scructuresExercise {
         int[] chart = {1, 4, 78, 3};
 
         Scanner scanner = new Scanner(System.in);
+        System.out.println("wprowadź liczbę");
 
-//        int a = scanner.nextInt();
-//
-//        for (int i = 0; i < chart.length ; i++) {
-//            if(i==a) {return i;}
-//            else
-//                return; -1;
+        int a = scanner.nextInt();
 
-
-
-
-
+        for (int i = 0; i < chart.length; i++) {
+            if (a == chart[i]) {
+                System.out.println(i);
+            }
+            //else System.out.println("-1");
+        }
     }
 }
