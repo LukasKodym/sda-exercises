@@ -39,7 +39,7 @@ public class ScructuresExercise {
             System.out.println(parzyste[i]);
         }
         System.out.println();
-        for (int i = 0; i < nieparzyste.length ; i++) {
+        for (int i = 0; i < nieparzyste.length; i++) {
 
             nieparzyste[i] = n;
             n += 2;
@@ -52,6 +52,7 @@ public class ScructuresExercise {
         System.out.println("wprowadź liczbę");
 
         int a = scanner.nextInt();
+        //System.out.println(indexOf(chart, a));
 
         for (int i = 0; i < chart.length; i++) {
             if (a == chart[i]) {
@@ -60,4 +61,10 @@ public class ScructuresExercise {
             //else System.out.println("-1");
         }
     }
+//    public static int indexOf(int[] array, int element) {
+//        for (int i = 0; i < array.length; i++) {
+//            if (array[i] == element) return i;
+//        }
+//        return -1;
+//    }
 }
