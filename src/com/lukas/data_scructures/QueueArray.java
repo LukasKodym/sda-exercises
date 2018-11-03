@@ -1,5 +1,7 @@
 package com.lukas.data_scructures;
 
+import java.util.Arrays;
+
 public class QueueArray {
 
     private int[] array = new int[10];
@@ -11,16 +13,20 @@ public class QueueArray {
 
     }
 
-    public int pop(){
+    public int pop() {
         return array[size--];
     }
 
-    public String toString(){
-        return null;
-        //todo to finish this method
+//    public String toString(){
+//        return null;
+//        //todo to finish this method
+//    }
+
+    @Override
+    public String toString() {
+        return "QueueArray{" +
+                "array=" + Arrays.toString(array) +
+                ", size=" + size +
+                '}';
     }
-
 }
-
-
-
