@@ -59,12 +59,26 @@ public class MyList {
 
         p.prev = tail;
         tail = p;
-       count++;
+        count++;
         if (p.prev != null) {
             p.prev.next = p;
         } else {
             head = p;
         }
+        return this;
+    }
+
+    public MyList insertBefore(Element nextElement, String text) {
+        Element p = new Element();
+        p.data = text;
+
+        return this;
+    }
+
+    public MyList insertAfter(Element prevElement, String text) {
+        Element p = new Element();
+        p.data = text;
+
         return this;
     }
 }
