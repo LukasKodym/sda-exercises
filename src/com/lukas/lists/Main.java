@@ -33,6 +33,10 @@ public class Main {
         list.printElementsRev();
         System.out.println();
         System.out.println(list.toString());
+        System.out.println();
+        list.insert("element czwarty");
+        System.out.println(list.toString());
+        System.out.println();
 
     }
 }
