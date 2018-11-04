@@ -38,7 +38,7 @@ public class Main {
         System.out.println();
         list.printElementsRev();
         System.out.println();
-        System.out.println(list.toString());
+        System.out.println(list);
 
         MyList listLetters = new MyList();
 
@@ -46,7 +46,7 @@ public class Main {
         listLetters.append("element B");
         listLetters.append("element C");
         listLetters.append("element D");
-        System.out.println(listLetters.toString());
+        System.out.println(listLetters);
 
     }
 }
