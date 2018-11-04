@@ -97,8 +97,24 @@ public class MyList {
             tail = p;
         }
         count++;
+        return this;
+    }
 
+    public MyList delete(Element e) {
 
+        count--;
+        if (e.prev != null) {
+            e.prev.next = e.next;
+        }
+        else {
+            head = e.next;
+        }
+        if (e.next != null) {
+            e.next.prev = e.prev;
+        }
+        else {
+            tail = e.prev;
+        }
         return this;
     }
 }

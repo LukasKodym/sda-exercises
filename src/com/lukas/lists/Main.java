@@ -41,6 +41,10 @@ public class Main {
 //        System.out.println();
         System.out.println(list);
 
+        list.delete(list.head.next);
+
+        System.out.println(list);
+
 
     }
 }
