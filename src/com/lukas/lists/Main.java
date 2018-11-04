@@ -1,10 +1,9 @@
 package com.lukas.lists;
 
-public class main {
+public class Main {
 
     public static void main(String[] args) {
         MyList list = new MyList();
-
 
         // pierwszy element
         Element e1 = new Element();
@@ -32,7 +31,8 @@ public class main {
         list.printElements();
         System.out.println();
         list.printElementsRev();
+        System.out.println();
+        System.out.println(list.toString());
 
     }
-
 }
