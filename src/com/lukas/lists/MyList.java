@@ -37,20 +37,34 @@ public class MyList {
         return out;
     }
 
-    public MyList insert(String text) {
-        MyList l = new MyList();
+    public MyList insert(String text) { // adding element to the begining of the list
+
         Element p = new Element();
         p.data = text;
-        p.prev = null;
-        p.next = l.head;
-        l.head = p;
-        l.count++;
 
-
-
+        p.next = head;
+        head = p;
+        count++;
+        if (p.next != null) {
+            p.next.prev = p;
+        } else {
+            tail = p;
+        }
         return this;
-
     }
 
+    public MyList append(String text) { // adding element to the end of the list
+        Element p = new Element();
+        p.data = text;
 
+        p.prev = tail;
+        tail = p;
+       count++;
+        if (p.prev != null) {
+            p.prev.next = p;
+        } else {
+            head = p;
+        }
+        return this;
+    }
 }
