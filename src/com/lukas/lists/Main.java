@@ -29,24 +29,18 @@ public class Main {
 //        list.tail = e3;
 //        list.count++;
 
-        list.insert("element czwarty");
-        list.insert("element trzeci");
-        list.insert("element drugi");
+        list.append("element drugi");
+        list.append("element trzeci");
+        list.append("element czwarty");
         list.insert("element pierwszy");
+        list.insertBefore(list.head.next, "intruz");
 
-        list.printElements();
-        System.out.println();
-        list.printElementsRev();
-        System.out.println();
+//        list.printElements();
+//        System.out.println();
+//        list.printElementsRev();
+//        System.out.println();
         System.out.println(list);
 
-        MyList listLetters = new MyList();
-
-        listLetters.append("element A");
-        listLetters.append("element B");
-        listLetters.append("element C");
-        listLetters.append("element D");
-        System.out.println(listLetters);
 
     }
 }

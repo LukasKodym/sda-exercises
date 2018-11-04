@@ -44,12 +44,12 @@ public class MyList {
 
         p.next = head;
         head = p;
-        count++;
         if (p.next != null) {
             p.next.prev = p;
         } else {
             tail = p;
         }
+        count++;
         return this;
     }
 
@@ -59,12 +59,12 @@ public class MyList {
 
         p.prev = tail;
         tail = p;
-        count++;
         if (p.prev != null) {
             p.prev.next = p;
         } else {
             head = p;
         }
+        count++;
         return this;
     }
 
@@ -72,12 +72,32 @@ public class MyList {
         Element p = new Element();
         p.data = text;
 
+        p.prev = nextElement.prev;
+        p.next = nextElement;
+        nextElement.prev = p;
+        if (p.prev != null) {
+            p.prev.next = p;
+        } else {
+            head = p;
+        }
+        count++;
         return this;
     }
 
     public MyList insertAfter(Element prevElement, String text) {
         Element p = new Element();
         p.data = text;
+
+        p.prev = prevElement;
+        p.next = prevElement.next;
+        prevElement.next = p;
+        if (p.next != null) {
+            p.next.prev = p;
+        } else {
+            tail = p;
+        }
+        count++;
+
 
         return this;
     }
