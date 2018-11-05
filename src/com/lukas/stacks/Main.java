@@ -17,12 +17,11 @@ public class Main {
         }
         return result;
     }
+
     public static void main(String[] args) {
-        System.out.println(convertBase(12,2));
-        System.out.println(convertBase(12,8));
-        System.out.println(convertBase(0b1011,2));
-        System.out.println(convertBase(066,8));
-
+        System.out.println(convertBase(12, 2));
+        System.out.println(convertBase(12, 8));
+        System.out.println(convertBase(0b1011, 2));
+        System.out.println(convertBase(066, 8));
     }
-
 }
