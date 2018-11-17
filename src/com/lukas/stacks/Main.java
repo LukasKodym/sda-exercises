@@ -23,5 +23,6 @@ public class Main {
         System.out.println(convertBase(12, 8));
         System.out.println(convertBase(0b1011, 2));
         System.out.println(convertBase(066, 8));
+
     }
 }
