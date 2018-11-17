@@ -1,9 +1,12 @@
 package com.lukas.trees;
 
+import com.lukas.lists.MyList;
+
 import javax.script.Invocable;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
+import java.util.ArrayList;
 
 public class BinaryTreeElement {
 
@@ -26,7 +29,7 @@ public class BinaryTreeElement {
                 new BinaryTreeElement(
                         new BinaryTreeElement(0),
                         3,
-                        null
+                        new BinaryTreeElement(7)
                 ),
                 5, new BinaryTreeElement(6)
         );
@@ -60,8 +63,59 @@ public class BinaryTreeElement {
         int leftHight = (leftElement == null) ? 0 : leftElement.heightOfTree();
         int rightHight = (rightElement == null) ? 0 : rightElement.heightOfTree();
 
-        return Integer.max(leftHight, rightHight)+1;
+        return Integer.max(leftHight, rightHight) + 1;
     }
+
+    public ArrayList<Integer> getPreOrderList() {
+        ArrayList<Integer> preOrderedLis = new ArrayList<>();
+        this.addToPreOrderedList(preOrderedLis);
+        return preOrderedLis;
+    }
+
+    private void addToPreOrderedList(ArrayList<Integer> preOrderedList){
+        preOrderedList.add(data);
+        if (leftElement != null) {
+            leftElement.addToPreOrderedList(preOrderedList);
+        }
+        if (rightElement != null) {
+            rightElement.addToPreOrderedList(preOrderedList);
+        }
+
+    }
+
+    public ArrayList<Integer> getInOrderList() {
+        ArrayList<Integer> inOrderedLis = new ArrayList<>();
+        this.addToInOrderedList(inOrderedLis);
+        return inOrderedLis;
+    }
+
+    private void addToInOrderedList(ArrayList<Integer> inOrderedList){
+        if (leftElement != null) {
+            leftElement.addToInOrderedList(inOrderedList);
+        }
+        inOrderedList.add(data);
+        if (rightElement != null) {
+            rightElement.addToInOrderedList(inOrderedList);
+        }
+
+    }
+
+    public ArrayList<Integer> getPostOrderList() {
+        ArrayList<Integer> postOrderedLis = new ArrayList<>();
+        this.addToPostOrderedList(postOrderedLis);
+        return postOrderedLis;
+    }
+
+    private void addToPostOrderedList(ArrayList<Integer> postOrderedList){
+        if (leftElement != null) {
+            leftElement.addToPostOrderedList(postOrderedList);
+        }
+        if (rightElement != null) {
+            rightElement.addToInOrderedList(postOrderedList);
+        }
+        postOrderedList.add(data);
+    }
+
 
     @Override
     public String toString() {
@@ -70,6 +124,16 @@ public class BinaryTreeElement {
                 ", leftElement=" + leftElement +
                 ", rightElement=" + rightElement +
                 '}';
+    }
+
+    public void printPreOrderList() {
+        System.out.print(data + " ");
+        if (leftElement != null) {
+            leftElement.printPreOrderList();
+        }
+        if (rightElement != null) {
+            rightElement.printPreOrderList();
+        }
     }
 
     public Integer getData() {
