@@ -136,6 +136,7 @@ public class BinaryTreeElement {
         }
     }
 
+
     public Integer getData() {
         return data;
     }
